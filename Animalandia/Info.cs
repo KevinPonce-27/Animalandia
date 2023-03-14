@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Animalandia
+{
+    public partial class Info : Form
+    {
+        public Info()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_atras_Click(object sender, EventArgs e)
+        {
+            Form1 ventana_login = new Form1();
+            ventana_login.Show();
+            Close();
+        }
+    }
+}

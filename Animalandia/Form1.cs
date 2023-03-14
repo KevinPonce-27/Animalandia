@@ -31,5 +31,18 @@ namespace Animalandia
         {
 
         }
+
+        private void btn_info_Click(object sender, EventArgs e)
+        {
+            Info ventana_info = new Info();
+            ventana_info.Show();
+            Hide();
+            
+        }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
