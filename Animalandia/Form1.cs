@@ -44,5 +44,12 @@ namespace Animalandia
         {
             Close();
         }
+
+        private void btn_ingreso_Click(object sender, EventArgs e)
+        {
+            MenuVeterinaria ventana_menu = new MenuVeterinaria();  
+            ventana_menu.Show();
+            Hide();
+        }
     }
 }

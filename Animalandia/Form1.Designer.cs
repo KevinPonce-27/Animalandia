@@ -29,27 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ingreso = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_info = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_ingreso
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(658, 377);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 34);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_ingreso.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ingreso.BackgroundImage")));
+            this.btn_ingreso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ingreso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ingreso.FlatAppearance.BorderSize = 0;
+            this.btn_ingreso.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_ingreso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_ingreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ingreso.Location = new System.Drawing.Point(658, 377);
+            this.btn_ingreso.Name = "btn_ingreso";
+            this.btn_ingreso.Size = new System.Drawing.Size(136, 34);
+            this.btn_ingreso.TabIndex = 0;
+            this.btn_ingreso.UseVisualStyleBackColor = true;
+            this.btn_ingreso.Click += new System.EventHandler(this.btn_ingreso_Click);
             // 
             // btn_salir
             // 
@@ -116,7 +117,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_info);
             this.Controls.Add(this.btn_salir);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_ingreso);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -133,7 +134,7 @@
         private System.Windows.Forms.Button btn_info;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ingreso;
     }
 }
 
