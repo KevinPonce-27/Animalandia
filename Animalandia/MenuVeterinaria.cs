@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RJCodeAdvance.RJControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,35 +34,6 @@ namespace Animalandia
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton10_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
@@ -95,9 +67,6 @@ namespace Animalandia
 
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-        }
 
         private void MenuVeterinaria_Resize(object sender, EventArgs e)
         {
@@ -142,9 +111,39 @@ namespace Animalandia
             }
         }
 
-        private void MenuVeterinaria_ResizeEnd(object sender, EventArgs e)
+        private void btn_registros_Click(object sender, EventArgs e)
         {
+            Open_DropdownMenu(rjDdmRegistro, sender);
+            lblNombrePanel.Text = "REGISTROS > ... ";
+        }
+        private void Open_DropdownMenu(RJDropdownMenu dropdownMenu, object sender)
+        {
+            Control control = (Control)sender;
+            dropdownMenu.VisibleChanged += new EventHandler((sender2,ev)
+                => DropdownMenu_VisibleChanged(sender2, ev, control));
+            dropdownMenu.Show(control, control.Width, 0);
 
+        }
+
+        private void DropdownMenu_VisibleChanged(object sender, EventArgs e, Control ctrl)
+        {
+            RJDropdownMenu dropdownMenu = (RJDropdownMenu)sender;
+            if (!DesignMode)
+            {
+                if (dropdownMenu.Visible)
+                {
+                    ctrl.BackColor = Color.FromArgb(0, 192, 65);
+                }
+                else
+                {
+                    ctrl.BackColor = Color.FromArgb(0, 192, 65);
+                }
+            }
+        }
+
+        private void btnRClientes_Click(object sender, EventArgs e)
+        {
+            lblNombrePanel.Text = "REGISTROS > clientes ";
         }
     }
 }

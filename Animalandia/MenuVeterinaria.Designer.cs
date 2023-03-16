@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            FontAwesome.Sharp.IconButton iconButton10;
-            FontAwesome.Sharp.IconButton iconButton9;
-            FontAwesome.Sharp.IconButton iconButton8;
-            FontAwesome.Sharp.IconButton iconButton5;
-            FontAwesome.Sharp.IconButton iconButton4;
-            FontAwesome.Sharp.IconButton iconButton3;
-            FontAwesome.Sharp.IconButton iconButton2;
+            this.components = new System.ComponentModel.Container();
+            FontAwesome.Sharp.IconButton btnPerfiles;
+            FontAwesome.Sharp.IconButton btnCaja;
+            FontAwesome.Sharp.IconButton btnConsultas;
+            FontAwesome.Sharp.IconButton btnCompra;
+            FontAwesome.Sharp.IconButton btnVenta;
+            FontAwesome.Sharp.IconButton btnReporte;
+            FontAwesome.Sharp.IconButton btn_registros;
             FontAwesome.Sharp.IconButton btn_inicio;
-            FontAwesome.Sharp.IconButton iconButton7;
-            FontAwesome.Sharp.IconButton iconButton6;
+            FontAwesome.Sharp.IconButton btnCerrarSesion;
+            FontAwesome.Sharp.IconButton btnUsuario;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuVeterinaria));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelSalir = new System.Windows.Forms.Panel();
@@ -53,16 +54,21 @@
             this.btn_maximizar = new FontAwesome.Sharp.IconButton();
             this.btn_cerrar = new FontAwesome.Sharp.IconButton();
             this.panelForm = new System.Windows.Forms.Panel();
-            iconButton10 = new FontAwesome.Sharp.IconButton();
-            iconButton9 = new FontAwesome.Sharp.IconButton();
-            iconButton8 = new FontAwesome.Sharp.IconButton();
-            iconButton5 = new FontAwesome.Sharp.IconButton();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.rjDdmRegistro = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
+            this.btnRClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRMascotas = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRProveedores = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnREmpleados = new System.Windows.Forms.ToolStripMenuItem();
+            btnPerfiles = new FontAwesome.Sharp.IconButton();
+            btnCaja = new FontAwesome.Sharp.IconButton();
+            btnConsultas = new FontAwesome.Sharp.IconButton();
+            btnCompra = new FontAwesome.Sharp.IconButton();
+            btnVenta = new FontAwesome.Sharp.IconButton();
+            btnReporte = new FontAwesome.Sharp.IconButton();
+            btn_registros = new FontAwesome.Sharp.IconButton();
             btn_inicio = new FontAwesome.Sharp.IconButton();
-            iconButton7 = new FontAwesome.Sharp.IconButton();
-            iconButton6 = new FontAwesome.Sharp.IconButton();
+            btnCerrarSesion = new FontAwesome.Sharp.IconButton();
+            btnUsuario = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelSalir.SuspendLayout();
             this.panelBotones.SuspendLayout();
@@ -71,175 +77,177 @@
             this.panelLOGO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxAnimalandia)).BeginInit();
             this.panelTitulo.SuspendLayout();
+            this.rjDdmRegistro.SuspendLayout();
             this.SuspendLayout();
             // 
-            // iconButton10
+            // btnPerfiles
             // 
-            iconButton10.BackColor = System.Drawing.Color.Transparent;
-            iconButton10.Cursor = System.Windows.Forms.Cursors.Hand;
-            iconButton10.FlatAppearance.BorderSize = 0;
-            iconButton10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            iconButton10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iconButton10.ForeColor = System.Drawing.Color.White;
-            iconButton10.IconChar = FontAwesome.Sharp.IconChar.Paw;
-            iconButton10.IconColor = System.Drawing.Color.White;
-            iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton10.IconSize = 30;
-            iconButton10.Location = new System.Drawing.Point(0, 329);
-            iconButton10.Name = "iconButton10";
-            iconButton10.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            iconButton10.Size = new System.Drawing.Size(178, 41);
-            iconButton10.TabIndex = 21;
-            iconButton10.Tag = "perfiles";
-            iconButton10.Text = " Perfiles";
-            iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            iconButton10.UseVisualStyleBackColor = false;
+            btnPerfiles.BackColor = System.Drawing.Color.Transparent;
+            btnPerfiles.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnPerfiles.FlatAppearance.BorderSize = 0;
+            btnPerfiles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            btnPerfiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnPerfiles.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnPerfiles.ForeColor = System.Drawing.Color.White;
+            btnPerfiles.IconChar = FontAwesome.Sharp.IconChar.Paw;
+            btnPerfiles.IconColor = System.Drawing.Color.White;
+            btnPerfiles.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnPerfiles.IconSize = 30;
+            btnPerfiles.Location = new System.Drawing.Point(0, 329);
+            btnPerfiles.Name = "btnPerfiles";
+            btnPerfiles.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            btnPerfiles.Size = new System.Drawing.Size(178, 41);
+            btnPerfiles.TabIndex = 21;
+            btnPerfiles.Tag = "perfiles";
+            btnPerfiles.Text = " Perfiles";
+            btnPerfiles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnPerfiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnPerfiles.UseVisualStyleBackColor = false;
             // 
-            // iconButton9
+            // btnCaja
             // 
-            iconButton9.BackColor = System.Drawing.Color.Transparent;
-            iconButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            iconButton9.FlatAppearance.BorderSize = 0;
-            iconButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            iconButton9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iconButton9.ForeColor = System.Drawing.Color.White;
-            iconButton9.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
-            iconButton9.IconColor = System.Drawing.Color.White;
-            iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton9.IconSize = 30;
-            iconButton9.Location = new System.Drawing.Point(3, 188);
-            iconButton9.Name = "iconButton9";
-            iconButton9.Padding = new System.Windows.Forms.Padding(0, 0, 65, 0);
-            iconButton9.Size = new System.Drawing.Size(175, 41);
-            iconButton9.TabIndex = 20;
-            iconButton9.Tag = "caja";
-            iconButton9.Text = " Caja";
-            iconButton9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            iconButton9.UseVisualStyleBackColor = false;
+            btnCaja.BackColor = System.Drawing.Color.Transparent;
+            btnCaja.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnCaja.FlatAppearance.BorderSize = 0;
+            btnCaja.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            btnCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCaja.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnCaja.ForeColor = System.Drawing.Color.White;
+            btnCaja.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
+            btnCaja.IconColor = System.Drawing.Color.White;
+            btnCaja.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnCaja.IconSize = 30;
+            btnCaja.Location = new System.Drawing.Point(3, 188);
+            btnCaja.Name = "btnCaja";
+            btnCaja.Padding = new System.Windows.Forms.Padding(0, 0, 65, 0);
+            btnCaja.Size = new System.Drawing.Size(175, 41);
+            btnCaja.TabIndex = 20;
+            btnCaja.Tag = "caja";
+            btnCaja.Text = " Caja";
+            btnCaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnCaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnCaja.UseVisualStyleBackColor = false;
             // 
-            // iconButton8
+            // btnConsultas
             // 
-            iconButton8.BackColor = System.Drawing.Color.Transparent;
-            iconButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            iconButton8.FlatAppearance.BorderSize = 0;
-            iconButton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            iconButton8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iconButton8.ForeColor = System.Drawing.Color.White;
-            iconButton8.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            iconButton8.IconColor = System.Drawing.Color.White;
-            iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton8.IconSize = 30;
-            iconButton8.Location = new System.Drawing.Point(1, 282);
-            iconButton8.Name = "iconButton8";
-            iconButton8.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            iconButton8.Size = new System.Drawing.Size(177, 41);
-            iconButton8.TabIndex = 19;
-            iconButton8.Tag = "consultas";
-            iconButton8.Text = "Consultas";
-            iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            iconButton8.UseVisualStyleBackColor = false;
+            btnConsultas.BackColor = System.Drawing.Color.Transparent;
+            btnConsultas.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnConsultas.FlatAppearance.BorderSize = 0;
+            btnConsultas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnConsultas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnConsultas.ForeColor = System.Drawing.Color.White;
+            btnConsultas.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            btnConsultas.IconColor = System.Drawing.Color.White;
+            btnConsultas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnConsultas.IconSize = 30;
+            btnConsultas.Location = new System.Drawing.Point(1, 282);
+            btnConsultas.Name = "btnConsultas";
+            btnConsultas.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            btnConsultas.Size = new System.Drawing.Size(177, 41);
+            btnConsultas.TabIndex = 19;
+            btnConsultas.Tag = "consultas";
+            btnConsultas.Text = "Consultas";
+            btnConsultas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnConsultas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnConsultas.UseVisualStyleBackColor = false;
             // 
-            // iconButton5
+            // btnCompra
             // 
-            iconButton5.BackColor = System.Drawing.Color.Transparent;
-            iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            iconButton5.FlatAppearance.BorderSize = 0;
-            iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            iconButton5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iconButton5.ForeColor = System.Drawing.Color.White;
-            iconButton5.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            iconButton5.IconColor = System.Drawing.Color.White;
-            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton5.IconSize = 30;
-            iconButton5.Location = new System.Drawing.Point(3, 94);
-            iconButton5.Name = "iconButton5";
-            iconButton5.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
-            iconButton5.Size = new System.Drawing.Size(175, 41);
-            iconButton5.TabIndex = 17;
-            iconButton5.Tag = "compra";
-            iconButton5.Text = " Compra";
-            iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            iconButton5.UseVisualStyleBackColor = false;
+            btnCompra.BackColor = System.Drawing.Color.Transparent;
+            btnCompra.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnCompra.FlatAppearance.BorderSize = 0;
+            btnCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCompra.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnCompra.ForeColor = System.Drawing.Color.White;
+            btnCompra.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            btnCompra.IconColor = System.Drawing.Color.White;
+            btnCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnCompra.IconSize = 30;
+            btnCompra.Location = new System.Drawing.Point(3, 94);
+            btnCompra.Name = "btnCompra";
+            btnCompra.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
+            btnCompra.Size = new System.Drawing.Size(175, 41);
+            btnCompra.TabIndex = 17;
+            btnCompra.Tag = "compra";
+            btnCompra.Text = " Compra";
+            btnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnCompra.UseVisualStyleBackColor = false;
             // 
-            // iconButton4
+            // btnVenta
             // 
-            iconButton4.BackColor = System.Drawing.Color.Transparent;
-            iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            iconButton4.FlatAppearance.BorderSize = 0;
-            iconButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            iconButton4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iconButton4.ForeColor = System.Drawing.Color.White;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.ShoppingBag;
-            iconButton4.IconColor = System.Drawing.Color.White;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 30;
-            iconButton4.Location = new System.Drawing.Point(3, 141);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Padding = new System.Windows.Forms.Padding(0, 0, 55, 0);
-            iconButton4.Size = new System.Drawing.Size(172, 41);
-            iconButton4.TabIndex = 16;
-            iconButton4.Tag = "venta";
-            iconButton4.Text = " Venta";
-            iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            iconButton4.UseVisualStyleBackColor = false;
+            btnVenta.BackColor = System.Drawing.Color.Transparent;
+            btnVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnVenta.FlatAppearance.BorderSize = 0;
+            btnVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            btnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnVenta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnVenta.ForeColor = System.Drawing.Color.White;
+            btnVenta.IconChar = FontAwesome.Sharp.IconChar.ShoppingBag;
+            btnVenta.IconColor = System.Drawing.Color.White;
+            btnVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnVenta.IconSize = 30;
+            btnVenta.Location = new System.Drawing.Point(3, 141);
+            btnVenta.Name = "btnVenta";
+            btnVenta.Padding = new System.Windows.Forms.Padding(0, 0, 55, 0);
+            btnVenta.Size = new System.Drawing.Size(172, 41);
+            btnVenta.TabIndex = 16;
+            btnVenta.Tag = "venta";
+            btnVenta.Text = " Venta";
+            btnVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnVenta.UseVisualStyleBackColor = false;
             // 
-            // iconButton3
+            // btnReporte
             // 
-            iconButton3.BackColor = System.Drawing.Color.Transparent;
-            iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            iconButton3.FlatAppearance.BorderSize = 0;
-            iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            iconButton3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iconButton3.ForeColor = System.Drawing.Color.White;
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.Print;
-            iconButton3.IconColor = System.Drawing.Color.White;
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.IconSize = 30;
-            iconButton3.Location = new System.Drawing.Point(3, 235);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Padding = new System.Windows.Forms.Padding(0, 0, 37, 0);
-            iconButton3.Size = new System.Drawing.Size(175, 41);
-            iconButton3.TabIndex = 15;
-            iconButton3.Tag = "reportes";
-            iconButton3.Text = " Reportes";
-            iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            iconButton3.UseVisualStyleBackColor = false;
+            btnReporte.BackColor = System.Drawing.Color.Transparent;
+            btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnReporte.FlatAppearance.BorderSize = 0;
+            btnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnReporte.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnReporte.ForeColor = System.Drawing.Color.White;
+            btnReporte.IconChar = FontAwesome.Sharp.IconChar.Print;
+            btnReporte.IconColor = System.Drawing.Color.White;
+            btnReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnReporte.IconSize = 30;
+            btnReporte.Location = new System.Drawing.Point(3, 235);
+            btnReporte.Name = "btnReporte";
+            btnReporte.Padding = new System.Windows.Forms.Padding(0, 0, 37, 0);
+            btnReporte.Size = new System.Drawing.Size(175, 41);
+            btnReporte.TabIndex = 15;
+            btnReporte.Tag = "reportes";
+            btnReporte.Text = " Reportes";
+            btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnReporte.UseVisualStyleBackColor = false;
             // 
-            // iconButton2
+            // btn_registros
             // 
-            iconButton2.BackColor = System.Drawing.Color.Transparent;
-            iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            iconButton2.FlatAppearance.BorderSize = 0;
-            iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            iconButton2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iconButton2.ForeColor = System.Drawing.Color.White;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
-            iconButton2.IconColor = System.Drawing.Color.White;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 30;
-            iconButton2.Location = new System.Drawing.Point(3, 47);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            iconButton2.Size = new System.Drawing.Size(175, 41);
-            iconButton2.TabIndex = 14;
-            iconButton2.Tag = "registro";
-            iconButton2.Text = "Registros";
-            iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = false;
+            btn_registros.BackColor = System.Drawing.Color.Transparent;
+            btn_registros.Cursor = System.Windows.Forms.Cursors.Hand;
+            btn_registros.FlatAppearance.BorderSize = 0;
+            btn_registros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            btn_registros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btn_registros.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btn_registros.ForeColor = System.Drawing.Color.White;
+            btn_registros.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            btn_registros.IconColor = System.Drawing.Color.White;
+            btn_registros.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_registros.IconSize = 30;
+            btn_registros.Location = new System.Drawing.Point(3, 47);
+            btn_registros.Name = "btn_registros";
+            btn_registros.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            btn_registros.Size = new System.Drawing.Size(175, 41);
+            btn_registros.TabIndex = 14;
+            btn_registros.Tag = "registro";
+            btn_registros.Text = "Registros";
+            btn_registros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btn_registros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btn_registros.UseVisualStyleBackColor = false;
+            btn_registros.Click += new System.EventHandler(this.btn_registros_Click);
             // 
             // btn_inicio
             // 
@@ -267,50 +275,50 @@
             btn_inicio.UseVisualStyleBackColor = false;
             btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
-            // iconButton7
+            // btnCerrarSesion
             // 
-            iconButton7.BackColor = System.Drawing.Color.Red;
-            iconButton7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            iconButton7.FlatAppearance.BorderSize = 0;
-            iconButton7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-            iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            iconButton7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iconButton7.ForeColor = System.Drawing.Color.White;
-            iconButton7.IconChar = FontAwesome.Sharp.IconChar.SignIn;
-            iconButton7.IconColor = System.Drawing.Color.White;
-            iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton7.IconSize = 30;
-            iconButton7.Location = new System.Drawing.Point(0, 47);
-            iconButton7.Name = "iconButton7";
-            iconButton7.Size = new System.Drawing.Size(178, 41);
-            iconButton7.TabIndex = 10;
-            iconButton7.Text = " Cerrar sesión";
-            iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            iconButton7.UseVisualStyleBackColor = false;
+            btnCerrarSesion.BackColor = System.Drawing.Color.Red;
+            btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCerrarSesion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.SignIn;
+            btnCerrarSesion.IconColor = System.Drawing.Color.White;
+            btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnCerrarSesion.IconSize = 30;
+            btnCerrarSesion.Location = new System.Drawing.Point(0, 47);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new System.Drawing.Size(178, 41);
+            btnCerrarSesion.TabIndex = 10;
+            btnCerrarSesion.Text = " Cerrar sesión";
+            btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnCerrarSesion.UseVisualStyleBackColor = false;
             // 
-            // iconButton6
+            // btnUsuario
             // 
-            iconButton6.BackColor = System.Drawing.Color.Transparent;
-            iconButton6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            iconButton6.FlatAppearance.BorderSize = 0;
-            iconButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            iconButton6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            iconButton6.ForeColor = System.Drawing.Color.White;
-            iconButton6.IconChar = FontAwesome.Sharp.IconChar.CircleUser;
-            iconButton6.IconColor = System.Drawing.Color.White;
-            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton6.IconSize = 30;
-            iconButton6.Location = new System.Drawing.Point(0, 6);
-            iconButton6.Name = "iconButton6";
-            iconButton6.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            iconButton6.Size = new System.Drawing.Size(178, 41);
-            iconButton6.TabIndex = 19;
-            iconButton6.Text = "Usuario";
-            iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            iconButton6.UseVisualStyleBackColor = false;
+            btnUsuario.BackColor = System.Drawing.Color.Transparent;
+            btnUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
+            btnUsuario.FlatAppearance.BorderSize = 0;
+            btnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnUsuario.ForeColor = System.Drawing.Color.White;
+            btnUsuario.IconChar = FontAwesome.Sharp.IconChar.CircleUser;
+            btnUsuario.IconColor = System.Drawing.Color.White;
+            btnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnUsuario.IconSize = 30;
+            btnUsuario.Location = new System.Drawing.Point(0, 6);
+            btnUsuario.Name = "btnUsuario";
+            btnUsuario.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            btnUsuario.Size = new System.Drawing.Size(178, 41);
+            btnUsuario.TabIndex = 19;
+            btnUsuario.Text = "Usuario";
+            btnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnUsuario.UseVisualStyleBackColor = false;
             // 
             // panelMenu
             // 
@@ -329,8 +337,8 @@
             // panelSalir
             // 
             this.panelSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(65)))));
-            this.panelSalir.Controls.Add(iconButton6);
-            this.panelSalir.Controls.Add(iconButton7);
+            this.panelSalir.Controls.Add(btnUsuario);
+            this.panelSalir.Controls.Add(btnCerrarSesion);
             this.panelSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelSalir.Location = new System.Drawing.Point(0, 585);
             this.panelSalir.Name = "panelSalir";
@@ -339,13 +347,13 @@
             // 
             // panelBotones
             // 
-            this.panelBotones.Controls.Add(iconButton10);
-            this.panelBotones.Controls.Add(iconButton9);
-            this.panelBotones.Controls.Add(iconButton8);
-            this.panelBotones.Controls.Add(iconButton5);
-            this.panelBotones.Controls.Add(iconButton4);
-            this.panelBotones.Controls.Add(iconButton3);
-            this.panelBotones.Controls.Add(iconButton2);
+            this.panelBotones.Controls.Add(btnPerfiles);
+            this.panelBotones.Controls.Add(btnCaja);
+            this.panelBotones.Controls.Add(btnConsultas);
+            this.panelBotones.Controls.Add(btnCompra);
+            this.panelBotones.Controls.Add(btnVenta);
+            this.panelBotones.Controls.Add(btnReporte);
+            this.panelBotones.Controls.Add(btn_registros);
             this.panelBotones.Controls.Add(btn_inicio);
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotones.Location = new System.Drawing.Point(0, 164);
@@ -374,7 +382,6 @@
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre Apellido";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNombre.Click += new System.EventHandler(this.label1_Click);
             // 
             // picBoxPerfil
             // 
@@ -407,7 +414,6 @@
             this.picboxAnimalandia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picboxAnimalandia.TabIndex = 0;
             this.picboxAnimalandia.TabStop = false;
-            this.picboxAnimalandia.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelTitulo
             // 
@@ -508,11 +514,54 @@
             this.panelForm.Size = new System.Drawing.Size(798, 621);
             this.panelForm.TabIndex = 2;
             // 
+            // rjDdmRegistro
+            // 
+            this.rjDdmRegistro.BackColor = System.Drawing.Color.White;
+            this.rjDdmRegistro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjDdmRegistro.IsMainMenu = false;
+            this.rjDdmRegistro.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnRClientes,
+            this.btnRMascotas,
+            this.btnRProveedores,
+            this.btnREmpleados});
+            this.rjDdmRegistro.MenuItemHeight = 50;
+            this.rjDdmRegistro.MenuItemTextColor = System.Drawing.Color.Black;
+            this.rjDdmRegistro.Name = "rjDdmRegistro";
+            this.rjDdmRegistro.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(65)))));
+            this.rjDdmRegistro.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.rjDdmRegistro.Size = new System.Drawing.Size(158, 92);
+            // 
+            // btnRClientes
+            // 
+            this.btnRClientes.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnRClientes.Name = "btnRClientes";
+            this.btnRClientes.Size = new System.Drawing.Size(157, 22);
+            this.btnRClientes.Text = "Clientes";
+            this.btnRClientes.Click += new System.EventHandler(this.btnRClientes_Click);
+            // 
+            // btnRMascotas
+            // 
+            this.btnRMascotas.Name = "btnRMascotas";
+            this.btnRMascotas.Size = new System.Drawing.Size(157, 22);
+            this.btnRMascotas.Text = "Mascotas";
+            // 
+            // btnRProveedores
+            // 
+            this.btnRProveedores.Name = "btnRProveedores";
+            this.btnRProveedores.Size = new System.Drawing.Size(157, 22);
+            this.btnRProveedores.Text = "Proveedores";
+            // 
+            // btnREmpleados
+            // 
+            this.btnREmpleados.Name = "btnREmpleados";
+            this.btnREmpleados.Size = new System.Drawing.Size(157, 22);
+            this.btnREmpleados.Text = "Empleados";
+            // 
             // MenuVeterinaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(976, 673);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.panelTitulo);
@@ -523,7 +572,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu de opciones";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.ResizeEnd += new System.EventHandler(this.MenuVeterinaria_ResizeEnd);
             this.Resize += new System.EventHandler(this.MenuVeterinaria_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panelSalir.ResumeLayout(false);
@@ -535,6 +583,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picboxAnimalandia)).EndInit();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
+            this.rjDdmRegistro.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -555,5 +604,10 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.PictureBox picBoxPerfil;
         private System.Windows.Forms.Panel panelLOGO;
+        private RJCodeAdvance.RJControls.RJDropdownMenu rjDdmRegistro;
+        private System.Windows.Forms.ToolStripMenuItem btnRClientes;
+        private System.Windows.Forms.ToolStripMenuItem btnRMascotas;
+        private System.Windows.Forms.ToolStripMenuItem btnRProveedores;
+        private System.Windows.Forms.ToolStripMenuItem btnREmpleados;
     }
 }
