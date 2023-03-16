@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="iconButton7.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="iconButton10.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
@@ -127,9 +124,6 @@
     <value>False</value>
   </metadata>
   <metadata name="iconButton8.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="iconButton6.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="iconButton5.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -147,11 +141,17 @@
   <metadata name="btn_inicio.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="iconButton7.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="iconButton6.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picBoxPerfil.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPcAAAD4CAYAAAAw2nCGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAe
-        vwAAHr8BQ/1smgAAVz1JREFUeF7tnQd8Xdd935MmaZuO1CNeceMs147tNHaWE6d2ktZOm7RNm500duzE
+        vAAAHrwB7kRN9wAAVz1JREFUeF7tnQd8Xdd935MmaZuO1CNeceMs147tNHaWE6d2ktZOm7RNm500duzE
         ceM6dhLHTqxYlCiJlCiLQxIpUiIpanHvKU5xiKRAECRBggRIggSIvcfDHu8BpPv7Pt//ycXjxSIegPeA
         8/98fuIV7rn33XvO+e//Ofe7fvGjH/XIfHx3CP8swPcE+N4Qvm8CCN8H2P3t94A9Q9QzemQYIv/oMS1I
         ZeAw88J8/1z4F8K/FP6V8K+FfyP82wA/EODfReBNIUSdt2sB9+K+gN/gt75f4Hd5BhMEYcb3TJ+BcAff
@@ -526,10 +526,10 @@
         2eBDv1/A5Ma9QUMPx9DOnxaixsJjWHz0u/4/Z3+aC7gNlMcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picboxAnimalandia.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAbkAAACLCAYAAAD8kec6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAe
-        vgAAHr4BkbqOfgAAWWhJREFUeF7tnQeYVFW27++7zzGMBB0TEkQQFEGdERXMYgLjGNFxzDomFNPo6B0d
+        vAAAHrwB7kRN9wAAWWhJREFUeF7tnQeYVFW27++7zzGMBB0TEkQQFEGdERXMYgLjGNFxzDomFNPo6B0d
         H+YRUbw6ZHUUFRQQdQAFARUVBMmhocm5obuBzt10N8289Sv2qrurap/q6u6qAvvu//etr7p3Duus/177
         7HPOf/z73//24sWLFy9e6qU4A7148eLFi5f6IM5AL168ePHipT6IM9CLFy9evHipD+IM9OLFixcvXuqD
         OAO9ePHixYuX+iDOQC9evHjx4qU+iDPQixcvXrx4qQ/iDPTixYsXL17qgzgDvXjx4sWLl/og7sD6h/9j
