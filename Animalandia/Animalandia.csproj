@@ -42,23 +42,26 @@
     <Reference Include="FontAwesome.Sharp.Pro, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.Pro.6.3.0\lib\net472\FontAwesome.Sharp.Pro.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1537.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -72,17 +75,21 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Caja.cs">
+    <Compile Include="AnimalandiaDataSet.cs">
+      <DependentUpon>AnimalandiaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AnimalandiaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnimalandiaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConexionSQL.cs" />
+    <Compile Include="ControladorForms.cs" />
+    <Compile Include="EmpleadoReporte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Caja.Designer.cs">
-      <DependentUpon>Caja.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Compra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Compra.Designer.cs">
-      <DependentUpon>Compra.cs</DependentUpon>
+    <Compile Include="EmpleadoReporte.Designer.cs">
+      <DependentUpon>EmpleadoReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -96,12 +103,6 @@
     <Compile Include="Info.Designer.cs">
       <DependentUpon>Info.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inicio.Designer.cs">
-      <DependentUpon>Inicio.cs</DependentUpon>
-    </Compile>
     <Compile Include="MenuVeterinaria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,50 +111,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RClientes.cs">
-      <SubType>Form</SubType>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TablasAnimalandia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TablasAnimalandia.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RClientes.Designer.cs">
-      <DependentUpon>RClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="REmpleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="REmpleados.Designer.cs">
-      <DependentUpon>REmpleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RMascotas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RMascotas.Designer.cs">
-      <DependentUpon>RMascotas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RProveedores.Designer.cs">
-      <DependentUpon>RProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Venta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Venta.Designer.cs">
-      <DependentUpon>Venta.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Caja.resx">
-      <DependentUpon>Caja.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Compra.resx">
-      <DependentUpon>Compra.cs</DependentUpon>
+    <EmbeddedResource Include="Empleado.rdlc" />
+    <EmbeddedResource Include="EmpleadoReporte.resx">
+      <DependentUpon>EmpleadoReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Info.resx">
       <DependentUpon>Info.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuVeterinaria.resx">
       <DependentUpon>MenuVeterinaria.cs</DependentUpon>
@@ -166,22 +138,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RClientes.resx">
-      <DependentUpon>RClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="REmpleados.resx">
-      <DependentUpon>REmpleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RMascotas.resx">
-      <DependentUpon>RMascotas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RProveedores.resx">
-      <DependentUpon>RProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Venta.resx">
-      <DependentUpon>Venta.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="AnimalandiaDataSet.xsc">
+      <DependentUpon>AnimalandiaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AnimalandiaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AnimalandiaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AnimalandiaDataSet.xss">
+      <DependentUpon>AnimalandiaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -192,9 +161,41 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TablasAnimalandia.xsc">
+      <DependentUpon>TablasAnimalandia.xsd</DependentUpon>
+    </None>
+    <None Include="TablasAnimalandia.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TablasAnimalandia.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TablasAnimalandia.xss">
+      <DependentUpon>TablasAnimalandia.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyeopen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyeoculto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

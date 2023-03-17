@@ -19,7 +19,7 @@ namespace Animalandia
 
         private void btn_atras_Click(object sender, EventArgs e)
         {
-            Form1 ventana_login = new Form1();
+            FormIniciarSesion ventana_login = new FormIniciarSesion();
             ventana_login.Show();
             Close();
         }
