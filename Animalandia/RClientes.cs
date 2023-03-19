@@ -16,5 +16,12 @@ namespace Animalandia
         {
             InitializeComponent();
         }
+
+        private void tmpHora_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+            lblRFecha.Text= DateTime.Now.ToShortDateString();
+        }
     }
 }

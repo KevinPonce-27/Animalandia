@@ -143,6 +143,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RClientes.resx">
+      <DependentUpon>RClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REmpleados.resx">
+      <DependentUpon>REmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMascotas.resx">
+      <DependentUpon>RMascotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RProveedores.resx">
+      <DependentUpon>RProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

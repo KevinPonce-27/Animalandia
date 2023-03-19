@@ -93,11 +93,7 @@ namespace Animalandia
 
         private void btn_inicio_Click(object sender, EventArgs e)
         {
-            Inicio form_inicio = new Inicio();
-            form_inicio.TopLevel = false;
-            panelForm.Controls.Add(form_inicio);
-            form_inicio.Dock = DockStyle.Fill;
-            form_inicio.Show();
+            AbrirFormEnPanel(new Inicio());
             lblNombrePanel.Text = "INICIO";
         }
 
@@ -113,6 +109,7 @@ namespace Animalandia
 
         private void btn_registros_Click(object sender, EventArgs e)
         {
+
             Open_DropdownMenu(rjDdmRegistro, sender);
             lblNombrePanel.Text = "REGISTROS > ... ";
         }
@@ -143,7 +140,40 @@ namespace Animalandia
 
         private void btnRClientes_Click(object sender, EventArgs e)
         {
-            lblNombrePanel.Text = "REGISTROS > clientes ";
+            lblNombrePanel.Text = "REGISTROS > Clientes ";
+            AbrirFormEnPanel(new RClientes());
+        }
+
+        private void btnRMascotas_Click(object sender, EventArgs e)
+        {
+            lblNombrePanel.Text = "REGISTROS > Mascotas ";
+            AbrirFormEnPanel(new RMascotas()); ;
+        }
+
+        private void btnRProveedores_Click(object sender, EventArgs e)
+        {
+            lblNombrePanel.Text = "REGISTROS > Proveedores ";
+            AbrirFormEnPanel(new RProveedores());
+
+        }
+
+        private void btnREmpleados_Click(object sender, EventArgs e)
+        {
+            lblNombrePanel.Text = "REGISTROS > Empleados ";
+            AbrirFormEnPanel(new REmpleados());
+        }
+
+        private void AbrirFormEnPanel(object formhija)
+        {
+            if (this.panelForm.Controls.Count > 0)
+                this.panelForm.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelForm.Controls.Add(fh);
+            this.panelForm.Tag = fh;
+            fh.Show();
+
         }
     }
 }

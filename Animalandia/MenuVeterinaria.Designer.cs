@@ -509,8 +509,8 @@
             this.panelForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForm.Location = new System.Drawing.Point(178, 52);
+            this.panelForm.Margin = new System.Windows.Forms.Padding(0);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
             this.panelForm.Size = new System.Drawing.Size(798, 621);
             this.panelForm.TabIndex = 2;
             // 
@@ -542,20 +542,23 @@
             // btnRMascotas
             // 
             this.btnRMascotas.Name = "btnRMascotas";
-            this.btnRMascotas.Size = new System.Drawing.Size(157, 22);
+            this.btnRMascotas.Size = new System.Drawing.Size(180, 22);
             this.btnRMascotas.Text = "Mascotas";
+            this.btnRMascotas.Click += new System.EventHandler(this.btnRMascotas_Click);
             // 
             // btnRProveedores
             // 
             this.btnRProveedores.Name = "btnRProveedores";
-            this.btnRProveedores.Size = new System.Drawing.Size(157, 22);
+            this.btnRProveedores.Size = new System.Drawing.Size(180, 22);
             this.btnRProveedores.Text = "Proveedores";
+            this.btnRProveedores.Click += new System.EventHandler(this.btnRProveedores_Click);
             // 
             // btnREmpleados
             // 
             this.btnREmpleados.Name = "btnREmpleados";
-            this.btnREmpleados.Size = new System.Drawing.Size(157, 22);
+            this.btnREmpleados.Size = new System.Drawing.Size(180, 22);
             this.btnREmpleados.Text = "Empleados";
+            this.btnREmpleados.Click += new System.EventHandler(this.btnREmpleados_Click);
             // 
             // MenuVeterinaria
             // 
