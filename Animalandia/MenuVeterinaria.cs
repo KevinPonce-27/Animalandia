@@ -192,6 +192,7 @@ namespace Animalandia
         {
             lblNombrePanel.Text = "REGISTROS > Información de caja ";
             AbrirFormEnPanel(new Caja());
+            //
         }
     }
 }
