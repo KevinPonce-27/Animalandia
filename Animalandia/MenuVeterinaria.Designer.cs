@@ -127,6 +127,7 @@
             btnCaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnCaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             btnCaja.UseVisualStyleBackColor = false;
+            btnCaja.Click += new System.EventHandler(this.btnCaja_Click);
             // 
             // btnConsultas
             // 
@@ -175,6 +176,7 @@
             btnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             btnCompra.UseVisualStyleBackColor = false;
+            btnCompra.Click += new System.EventHandler(this.btnCompra_Click);
             // 
             // btnVenta
             // 
@@ -199,6 +201,7 @@
             btnVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             btnVenta.UseVisualStyleBackColor = false;
+            btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
             // 
             // btnReporte
             // 
@@ -542,21 +545,21 @@
             // btnRMascotas
             // 
             this.btnRMascotas.Name = "btnRMascotas";
-            this.btnRMascotas.Size = new System.Drawing.Size(180, 22);
+            this.btnRMascotas.Size = new System.Drawing.Size(157, 22);
             this.btnRMascotas.Text = "Mascotas";
             this.btnRMascotas.Click += new System.EventHandler(this.btnRMascotas_Click);
             // 
             // btnRProveedores
             // 
             this.btnRProveedores.Name = "btnRProveedores";
-            this.btnRProveedores.Size = new System.Drawing.Size(180, 22);
+            this.btnRProveedores.Size = new System.Drawing.Size(157, 22);
             this.btnRProveedores.Text = "Proveedores";
             this.btnRProveedores.Click += new System.EventHandler(this.btnRProveedores_Click);
             // 
             // btnREmpleados
             // 
             this.btnREmpleados.Name = "btnREmpleados";
-            this.btnREmpleados.Size = new System.Drawing.Size(180, 22);
+            this.btnREmpleados.Size = new System.Drawing.Size(157, 22);
             this.btnREmpleados.Text = "Empleados";
             this.btnREmpleados.Click += new System.EventHandler(this.btnREmpleados_Click);
             // 

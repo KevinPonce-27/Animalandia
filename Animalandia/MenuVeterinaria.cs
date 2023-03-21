@@ -175,5 +175,23 @@ namespace Animalandia
             fh.Show();
 
         }
+
+        private void btnVenta_Click(object sender, EventArgs e)
+        {
+            lblNombrePanel.Text = "REGISTROS > Venta ";
+            AbrirFormEnPanel(new Venta());
+        }
+
+        private void btnCompra_Click(object sender, EventArgs e)
+        {
+            lblNombrePanel.Text = "REGISTROS > Compra ";
+            AbrirFormEnPanel(new Compra());
+        }
+
+        private void btnCaja_Click(object sender, EventArgs e)
+        {
+            lblNombrePanel.Text = "REGISTROS > Información de caja ";
+            AbrirFormEnPanel(new Caja());
+        }
     }
 }
